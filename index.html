@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <input min="10" max="99" type="number" name="age" id="number" class="form-control" placeholder="Age" />
             </div>
             <div class="form-group">
-                <p>Which option best describes your current role?</p>
+                <label>Current Role?</label>
                 <select id="dropdown" name="role" class="form-control" required>
                     <option disabled selected value>Select current role</option>
                     <option value="student">Student</option>
@@ -37,18 +37,27 @@
                 </select>
             </div>
 
-            <div class="legacy-form-group">
-                <legend>Would you recommend freeCodeCamp to a friend?</legend>
-                <input name="user-recommend" value="definitely" type="radio" class="radio-label" checked />
-                <label class='radio-label'>Yes</label>
-                <input name="user-recommend" value="definitely" type="radio" class="radio-label" checked />
-                <label class='radio-label'>No</label>
-                <input name="user-recommend" value="definitely" type="radio" class="radio-label" checked />
-                <label class='radio-label'>Maybe</label>
-            </div>
+            <fieldset class='legacy-form-group'>
+                <legend>Radio Button?</legend>
+                <input id='radio-yes'
+                       name='talk-type'
+                       type='radio'
+                       value='main-stage' checked/>
+                <label for='talk-type-1' class='radio-label'>Yes</label>
+                <input id='radio-no'
+                       name='talk-type'
+                       type='radio'
+                       value='workshop'/>
+                <label for='talk-type-2' class='radio-label'>No</label>
+                <input id='radio-maybe'
+                       name='talk-type'
+                       type='radio'
+                       value='workshop'/>
+                <label for='talk-type-2' class='radio-label'>Maybe</label>
+              </fieldset>
 
             <div class="form-group">
-                <p>What is your favorite feature of freeCodeCamp?</p>
+                <label>Favorite Feature?</label>
                 <select id="most-like" name="mostLike" class="form-control" required>
                     <option disabled selected value>Select an option</option>
                     <option value="challenges">Challenges</option>
@@ -58,14 +67,47 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label>
-                    <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Back-end</label>
-                <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Data</label>
-            </div>
+            <fieldset class='legacy-form-group'>
+                <legend>Checkbox?</legend>
+                <input id='radio-yes'
+                       name='talk-type'
+                       type='checkbox'
+                       value='main-stage' checked/>
+                <label for='talk-type-1' class='radio-label'>Yes</label>
+                <input id='radio-no'
+                       name='talk-type'
+                       type='checkbox'
+                       value='workshop'/>
+                <label for='talk-type-2' class='radio-label'>No</label>
+                <input id='radio-maybe'
+                       name='talk-type'
+                       type='checkbox'
+                       value='workshop'/>
+                <label for='talk-type-2' class='radio-label'>Maybe</label>
+              </fieldset>
+
+              <fieldset class='legacy-form-group'>
+                <legend>Another Checkbox?</legend>
+                <input id='radio-yes'
+                       name='talk-type'
+                       type='checkbox'
+                       value='main-stage' checked/>
+                <label for='talk-type-1' class='radio-label'>Yes</label>
+                <input id='radio-no'
+                       name='talk-type'
+                       type='checkbox'
+                       value='workshop'/>
+                <label for='talk-type-2' class='radio-label'>No</label>
+                <input id='radio-maybe'
+                       name='talk-type'
+                       type='checkbox'
+                       value='workshop'/>
+                <label for='talk-type-2' class='radio-label'>Maybe</label>
+              </fieldset>
+            
 
             <div class="form-group">
-                <p>Comments?</p>
+                <label>Comments?</label>
                 <textarea id="comments" class="input-textarea" name="comment"
                     placeholder="Comment here..."></textarea>
             </div>
